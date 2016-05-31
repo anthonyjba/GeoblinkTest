@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html data-ng-app="app">  
+  <head>
+    <title>Geoblink Exercise</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8" />  
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+    <!-- header -->
+  <header class="page-header">
+    <h1>GeoBlink Exercise Front End</h1> 
+    <p class="text-small">AngularJS application with Dashboard Bootstrap and D3 radar chart.</p>
+  </header>
+
+    <section id="main-container">
+      <div class="container" ng-controller="MainCtrl as radar">
+        <div class="row">
+             <div class="col-md-12">
+                  <div ng-include="'app/componente1/dashboard.html'"></div>
+              </div>
+        </div>
+        
+        
+        
+        <div ng-include="'app/componente2/radar.html'"></div>
+        
+      </div>
+      
+      
+      
+    </section>
+
+    <!-- footer -->
+  <footer>
+    <p>Geoblink exercise by Anthony Bonifacio, 2016-06-01 - Madrid (Spain)
+      <br />
+      <a href="http://github.com/anthonyjba" target="_blank"><i class="fa fa-github"></i></a> |
+      <a href="http://www.linkedin.com/in/anthonyjba" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </p>
+  </footer>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!-- D3 -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    
+    <script src="app/componente2/radar.js"></script>
+    <script src="app/componente2/directive/radarDraw.js"></script>
+    <script src="app/app.controller.js"></script>
+    
+  </body>  
+</html>

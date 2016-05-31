@@ -1,0 +1,12 @@
+<h2>Componente 2</h2>
+<!-- visualization -->
+    <div class="visualization col-xs-7">
+      <p>Select example:
+        <select ng-options="example for example in radar.examples" ng-model="radar.exampleSelected" ng-change="radar.selectExample(radar.exampleSelected)"></select>
+      </p>
+      
+<div class="row">
+      <div class="col-md-12">
+          <radar json="radar.json" config="radar.config"></radar>
+      </div>
+</div>

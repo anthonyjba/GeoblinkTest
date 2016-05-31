@@ -1,0 +1,46 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
+html {
+  overflow-y: scroll;
+}
+h1 {
+  color: steelblue;
+  font-weight: 800;
+  font-size: 1.7em;
+}
+h2 {
+  color: steelblue;
+  font-size: 1.3em;
+  padding-bottom: 10px;
+}
+h3 {
+  color: gray;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+footer a,
+footer a:hover, footer a:visited {
+  color: #D2A000;
+}
+.text-small {
+  font-size: 12px;
+  font-style: italic;
+}
+footer {
+  color: white;
+  padding-top: 5px;
+  border-top: 1px solid gray;
+  font-size: 12px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background: black;
+  text-align: center;
+}
