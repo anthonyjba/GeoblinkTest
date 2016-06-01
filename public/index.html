@@ -17,21 +17,19 @@
     <p class="text-small">AngularJS application with Dashboard Bootstrap and D3 radar chart.</p>
   </header>
 
-    <section id="main-container">
-      <div class="container" ng-controller="MainCtrl as radar">
-        <div class="row">
-             <div class="col-md-12">
-                  <div ng-include="'app/componente1/dashboard.html'"></div>
-              </div>
-        </div>
-        
-        
-        
-        <div ng-include="'app/componente2/radar.html'"></div>
-        
+    <section id="component1">
+      
+      <div class="container">       
+        <div ng-include="'app/componente1/dashboard.html'"></div>        
       </div>
       
+    </section>
+
+    <section id="component2" ng-controller="MainCtrl as radar">
       
+      <div class="container">        
+        <div ng-include="'app/componente2/radar.html'"></div>        
+      </div>
       
     </section>
 
