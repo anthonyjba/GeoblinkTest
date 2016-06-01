@@ -4,6 +4,7 @@ body {
   font-weight: 400;
   padding-top: 10px;
   padding-bottom: 100px;
+  background: #d9e0e7;
 }
 html {
   overflow-y: scroll;
@@ -43,4 +44,67 @@ footer {
   width: 100%;
   background: black;
   text-align: center;
+}
+.icon-size {
+  font-size: 40px;
+}
+
+.widget {
+    margin-bottom: 20px;
+    color: #fff;
+}
+.widget.widget-stats {
+    position: relative;
+}
+.widget-stats .stats-icon {
+    font-size: 42px;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    line-height: 56px;
+    margin-left: 15px;    
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    opacity: .2;
+    filter: alpha(opacity=20);
+}
+.widget-stats .stats-info h4{
+  font-size:12px;
+  margin:5px 10px;
+  color:#fff
+}
+.widget-stats .stats-info p{
+  font-size:32px;font-weight:300;margin-bottom:0;margin-left:14px;
+  }
+
+.dashboard-stat .visual {
+    float: left;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    font-size: 35px;
+    line-height: 35px
+}
+
+.dashboard-stat .visual>i {
+     margin-left:-35px; 
+     /*font-size:110px; 
+     line-height:110px */
+}
+
+.dashboard-stat .details {
+    position: absolute;
+    right: 15px;
+    padding-right: 15px
+}
+
+.dashboard-stat .details .number {
+    padding-top: 25px;
+    text-align: right;
+    /*font-size: 34px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    font-weight: 300*/
 }

@@ -1,42 +1,62 @@
 <h2>Componente 1</h2>
-<div class="row">
-      <div class="col-md-12">
-          
-          <ul class="list-group">
+<div class="container-fluid">
 
-                        <li id="cargaPrecalificadas" class="list-group-item">
-                            <span>Precalificadas</span>
-                            <div class="progress" style="float: right; width: 40%;">
-                                <div class="progress-bar progress-bar-warning progress-bar-striped active"
-                                    style="width: 100%">
-                                </div>
-                            </div>
-                        </li>
-                        <!--<li class="list-group-item">
-                            <span>Calificadas</span>
-                            <div class="progress" style="float: right; width: 40%;">
-                                <div class="progress-bar progress-bar-success progress-bar-striped active"
-                                    style="width: 100%">
-                                </div>
-                            </div>
-                        </li>-->
-                        <li class="list-group-item">
-                            <span>Descalificadas</span>
-                            <div class="progress" style="float: right; width: 40%;">
-                                <div class="progress-bar progress-bar-danger progress-bar-striped active"
-                                    style="width: 100%">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <span>Totales</span>
-                            <div class="progress" style="float: right; width: 40%;">
-                                <div class="progress-bar progress-bar progress-bar-striped active"
-                                    style="width: 100%">
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-          
-      </div>
+            <!-- Fila de marcadores generales-->
+            <div class="row row-margin">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget widget-stats bg-danger" style="border-radius: 4px;"> 
+                        <div class="stats-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="stats-info">
+                            <h4>Population</h4>
+                            <p>
+                                {{ 9084 | number:0 }}
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget widget-stats bg-warning" style="border-radius: 4px;">
+                        <div class="stats-icon">
+                            <i class="fa fa-meh-o"></i>
+                        </div>
+                        <div class="stats-info">
+                            <h4>Population</h4>
+                            <p>
+                                {{ 9084 | number:0 }}
+                            </p>
+                        </div>
+
+                        <a class="more" href="" ng-click="mc.enlace_a_pestania('#tab_Precalificadas','precalificadas');">Ver más
+                            <i class="fa fa-share"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget widget-stats bg-primary" style="border-radius: 4px;">
+                        <div class="stats-icon">
+                            <i class="fa fa-smile-o icon-size"></i>
+                        </div>
+                        <div class="stats-info">
+                            <h4>Population</h4>
+                            <p>
+                                {{ 9084 | number:0 }}
+                            </p>
+                        </div>
+
+                        <a class="more" href="" ng-click="mc.enlace_a_pestania('#tab_Calificadas','calificadas');">
+                            Calle de la Virgen de los Peligros, 13, 28410, Manzanares el Real, Madrid, Spain
+                            <i class="fa fa-share"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
 </div>
