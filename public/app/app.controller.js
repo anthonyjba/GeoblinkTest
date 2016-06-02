@@ -13,19 +13,9 @@
     init();
     
     function init(){
-      // initialize controller variables
-      vm.examples = [
-        "data_the_avengers",
-        "data_plant_seasons",
-        "data_car_ratings"
-      ];
-      vm.exampleSelected = vm.examples[0];
-      // vm.getData = getData;
-      // vm.selectExample = selectExample;
-
-      // initialize controller functions
-      //vm.selectExample(vm.exampleSelected);
+      var count = 1;
       
+      // initialize controller variables to radar chart
       vm.config = {
         w: 250,
         h: 250,
@@ -44,7 +34,13 @@
       };
       console.log(vm.config);
       
+       
       $http.get("data/data.json").success(function(data) {
+        
+        data.forEach(function(d) { 
+          d.type = (d.variables.is_reference === true ? 'Reference area' : 'Compare area ' + count++)  
+        });
+          
         vm.json = data;
       });
       

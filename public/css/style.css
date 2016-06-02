@@ -1,11 +1,11 @@
-body {
+/*body {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 400;
   padding-top: 10px;
   padding-bottom: 100px;
   background: #d9e0e7;
-}
+}*/
 html {
   overflow-y: scroll;
 }
