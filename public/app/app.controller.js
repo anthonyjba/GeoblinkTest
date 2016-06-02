@@ -38,7 +38,7 @@
       $http.get("data/data.json").success(function(data) {
         
         data.forEach(function(d) { 
-          d.type = (d.variables.is_reference === true ? 'Reference area' : 'Compare area ' + count++)  
+          d.type = d.variables.is_reference === true ? 'Reference area' : 'Compared area ' + count++;  
         });
           
         vm.json = data;

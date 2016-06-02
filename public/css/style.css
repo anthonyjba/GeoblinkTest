@@ -79,32 +79,25 @@ footer {
   font-size:32px;font-weight:300;margin-bottom:0;margin-left:14px;
   }
 
-.dashboard-stat .visual {
-    float: left;
-    padding-left: 45px;
-    margin-bottom: 15px;
-    font-size: 35px;
-    line-height: 35px
+.bg-gray {
+  background-color: #d9e0e7;
+}
+.text-danger{
+  color : #a30000;
 }
 
-.dashboard-stat .visual>i {
-     margin-left:-35px; 
-     /*font-size:110px; 
-     line-height:110px */
+.text-warning{
+  color: #ff8800;
 }
 
-.dashboard-stat .details {
-    position: absolute;
-    right: 15px;
-    padding-right: 15px
+.text-primary{
+  color : #2a9fd6;
 }
 
-.dashboard-stat .details .number {
-    padding-top: 25px;
-    text-align: right;
-    /*font-size: 34px;
-    line-height: 36px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    font-weight: 300*/
+.center{
+  text-align: center;  
 }
+.bar {
+ height : 2px;
+ margin-bottom: 20px;
+ }

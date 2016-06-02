@@ -1,67 +1,68 @@
-<h2>Componente 1</h2>
+<h2>Componente 1 :</h2>
 <div class="container-fluid">
 
             <!-- Fila de marcadores generales-->
             <div class="row row-margin">
-                <div class="col-md-3 col-sm-6">
-                    <strong> {{ radar.json[0].type | uppercase }} </strong>
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-danger center"> {{ radar.json[0].type | uppercase }} </div>
                     <div class="widget widget-stats bg-danger" style="border-radius: 4px;"> 
                         <div class="stats-icon">
                             <i class="fa fa-users"></i>
                         </div>
-                        <div class="stats-info">
-                            <h4>Population</h4>
+                        <div class="stats-info">                            
                             <p>
                                 {{ radar.json[0].variables.population | number:0 }}
                             </p>
+                            <h4>Population</h4>
                         </div>
                         
                         <a class="more" href="" ng-click="">Ver más
                             <i class="fa fa-share"></i>
                         </a>
                     </div>
-                    {{ radar.json[0].address }}
+                    <div class="center"> {{ radar.json[0].address }}</div><div class="bg-danger bar"></div>
                 </div>
 
 
-                <div class="col-md-3 col-sm-6">
-                    {{ radar.json[1].type | uppercase }}
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-warning center"> {{ radar.json[1].type | uppercase }} </div>
                     <div class="widget widget-stats bg-warning" style="border-radius: 4px;">
                         <div class="stats-icon">
-                            <i class="fa fa-meh-o"></i>
+                            <i class="fa fa-users"></i>
                         </div>
                         <div class="stats-info">
-                            <h4>Population</h4>
+                            
                             <p>
                                 {{ radar.json[1].variables.population | number:0 }}
                             </p>
+                            <h4>Population</h4>
                         </div>
 
                         <a class="more" href="" ng-click="">Ver más
                             <i class="fa fa-share"></i>
                         </a>
                     </div>
-                    {{ radar.json[1].address }}
+                    <div class="center"> {{ radar.json[1].address }}</div><div class="bg-warning bar"></div>
                 </div>
 
-                <div class="col-md-3 col-sm-6">
-                    {{ radar.json[2].type | uppercase }}
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-primary center"> {{ radar.json[2].type | uppercase }} </div>
                     <div class="widget widget-stats bg-primary" style="border-radius: 4px;">
                         <div class="stats-icon">
-                            <i class="fa fa-smile-o icon-size"></i>
+                            <i class="fa fa-users"></i>
                         </div>
-                        <div class="stats-info">
-                            <h4>Population</h4>
+                        <div class="stats-info">                            
                             <p>
                                 {{ radar.json[2].variables.population | number:0 }}
                             </p>
+                            <h4>Population</h4>
                         </div>
 
                         <a class="more" href="" ng-click="">                            
                             <i class="fa fa-share"></i>
                         </a>
                     </div>
-                    {{ radar.json[2].address }}
+                    <div class="center"> {{ radar.json[2].address }}</div><div class="bg-primary bar"></div>
                 </div>
 
 
