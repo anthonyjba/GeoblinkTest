@@ -14,15 +14,26 @@ h1 {
   font-weight: 800;
   font-size: 1.7em;
 }
-h2 {
+/*h2 {
   color: steelblue;
   font-size: 1.3em;
   padding-bottom: 10px;
-}
-h3 {
+}*/
+/*h3 {
   color: gray;
   font-size: 1.2em;
   padding-bottom: 10px;
+}*/
+.download,
+#title { 
+  float: right; 
+}
+header h3 {
+  color: steelblue;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  text-align: right;
+  margin: 10px 10px 2px; 
 }
 footer a,
 footer a:hover, footer a:visited {
@@ -31,6 +42,8 @@ footer a:hover, footer a:visited {
 .text-small {
   font-size: 12px;
   font-style: italic;
+  color : #282828;
+  margin: 0px 10px; 
 }
 footer {
   color: white;
@@ -78,6 +91,16 @@ footer {
 .widget-stats .stats-info p{
   font-size:32px;font-weight:300;margin-bottom:0;margin-left:14px;
   }
+.widget-stats .stats-link a{
+  display:block;
+  margin:0px 0px -15px;
+  padding:7px 15px;
+  background:rgba(0,0,0,.4);
+  text-align:right;
+  color:#ddd;
+  font-weight:300;
+  text-decoration:none
+  }
 
 .bg-gray {
   background-color: #d9e0e7;
@@ -94,10 +117,13 @@ footer {
   color : #2a9fd6;
 }
 
-.center{
-  text-align: center;  
-}
 .bar {
  height : 2px;
  margin-bottom: 20px;
  }
+ 
+ .axis-labels {
+  fill: gray;
+  font-size: 10px;
+}
+#pngdataurl { display: none; }

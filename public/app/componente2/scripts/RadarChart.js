@@ -276,7 +276,8 @@ var RadarChart = {
         .attr("x", function(d, i) { return config.w / 2 * (1 - 1.3 * Math.sin(i * config.radians / vis.totalAxes)); })
         .attr("y", function(d, i) { return config.h / 2 * (1 - 1.1 * Math.cos(i * config.radians / vis.totalAxes)); })
         .attr("font-family", "sans-serif")
-        .attr("font-size", 11 * config.labelScale + "px");
+        .attr("font-size", 11 * config.labelScale + "px")
+        .attr("fill", "grey");
     }
 
 

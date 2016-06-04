@@ -14,37 +14,39 @@
 
 </head>
 
-<body ng-controller="MainCtrl as radar">
+<body>
 
   <!-- header -->
   <header class="bg-gray">
     <img src="images/logo.png" alt="geoblink">
-    <h1>Exercise Front End</h1>
-    <p class="text-small">AngularJS application with Dashboard Bootstrap and D3 radar chart.</p>
+    <div id="title">
+      <h3>Exercise FrontEnd</h3>
+      <p class="text-small">AngularJS application with Dashboard Bootstrap and D3 radar chart.</p>
+    </div>
   </header>
 
-  <section id="component1">
+  <div class="container" ng-controller="MainCtrl as radar">
 
-    <div class="container">
+    <section id="component1">
       <div ng-include="'app/componente1/dashboard.html'"></div>
-    </div>
+    </section>
 
-  </section>
-
-  <section id="component2">
-
-    <div class="container">
+    <section id="component2">
       <div ng-include="'app/componente2/radar.html'"></div>
-    </div>
+    </section>
+    
+  </div>
 
-  </section>
-
-  <p style="height:40px"></p>
+  <p style="height:40px">
+    <div id="pngdataurl"></div>
+  </p>
+  
   <!-- footer -->
   <footer>
     <p>Geoblink exercise by Anthony Bonifacio, 2016-06-01 - Madrid (Spain)
       <br />
       <a href="http://github.com/anthonyjba" target="_blank"><i class="fa fa-github"></i></a> |
+      <a href="http://twiter.com/anthonyjba" target="_blank"><i class="fa fa-twitter"></i></a> |
       <a href="http://www.linkedin.com/in/anthonyjba" target="_blank"><i class="fa fa-linkedin"></i></a>
     </p>
   </footer>
@@ -58,11 +60,11 @@
   <!-- Bootstrap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-
-  <script src="app/componente2/radar.js"></script>
-  <script src="app/componente2/directive/radarDraw.js"></script>
-  <script src="app/app.controller.js"></script>
+  <!-- code -->
+  <script src="app/componente2/scripts/RadarChart.js"></script>
+  <script src="app/componente2/scripts/radarParse.js"></script>
+  <script src="app/app.js"></script>
+  <!--<script src="app/app.controller.js"></script>-->
 
 </body>
-
 </html>

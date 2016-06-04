@@ -268,9 +268,9 @@ body {
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  background-color: #282828;
+  background-color: #414B56;
   color: #BDBDBD;
-  /*background-color: #060606;*/
+  /*background-color: #060606; #282828;*/
 }
 input,
 button,

@@ -1,71 +1,76 @@
 <h2>Componente 1 :</h2>
 <div class="container-fluid">
 
-            <!-- Fila de marcadores generales-->
-            <div class="row row-margin">
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-danger center"> {{ radar.json[0].type | uppercase }} </div>
-                    <div class="widget widget-stats bg-danger" style="border-radius: 4px;"> 
-                        <div class="stats-icon">
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <div class="stats-info">                            
-                            <p>
-                                {{ radar.json[0].variables.population | number:0 }}
-                            </p>
-                            <h4>Population</h4>
-                        </div>
-                        
-                        <a class="more" href="" ng-click="">Ver más
-                            <i class="fa fa-share"></i>
-                        </a>
-                    </div>
-                    <div class="center"> {{ radar.json[0].address }}</div><div class="bg-danger bar"></div>
-                </div>
+  <!-- Dashboard Element 1 -->  
+  <div class="row row-margin">
+    <div class="col-md-4 col-sm-6">
+      <div class="text-danger text-center"> {{ radar.json[0].type | uppercase }} </div>
+      <div class="widget widget-stats bg-danger" style="border-radius: 4px;">
+        <div class="stats-icon">
+          <i class="fa fa-users"></i>
+        </div>
+        <div class="stats-info">
+          <p>
+            {{ radar.json[0].variables.population | number:0 }}
+          </p>
+          <h4>Population</h4>
+        </div>
+        <div class="stats-link">
+          <a href="" ng-click="">[ Map ]
+            <i class="fa fa-share"></i>
+          </a>
+        </div>
+      </div>
+      <div class="text-center"> {{ radar.json[0].address }}</div>
+      <div class="bg-danger bar"></div>
+    </div>
 
+    <!-- Dashboard Element 2 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="text-warning text-center"> {{ radar.json[1].type | uppercase }} </div>
+      <div class="widget widget-stats bg-warning" style="border-radius: 4px;">
+        <div class="stats-icon">
+          <i class="fa fa-users"></i>
+        </div>
+        <div class="stats-info">
+          <p>
+            {{ radar.json[1].variables.population | number:0 }}
+          </p>
+          <h4>Population</h4>
+        </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-warning center"> {{ radar.json[1].type | uppercase }} </div>
-                    <div class="widget widget-stats bg-warning" style="border-radius: 4px;">
-                        <div class="stats-icon">
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <div class="stats-info">
-                            
-                            <p>
-                                {{ radar.json[1].variables.population | number:0 }}
-                            </p>
-                            <h4>Population</h4>
-                        </div>
+        <div class="stats-link">
+          <a href="" ng-click="">[ Map ]
+            <i class="fa fa-share"></i>
+          </a>
+        </div>
+      </div>
+      <div class="text-center"> {{ radar.json[1].address }}</div>
+      <div class="bg-warning bar"></div>
+    </div>
 
-                        <a class="more" href="" ng-click="">Ver más
-                            <i class="fa fa-share"></i>
-                        </a>
-                    </div>
-                    <div class="center"> {{ radar.json[1].address }}</div><div class="bg-warning bar"></div>
-                </div>
+    <!-- Dashboard Element 3 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="text-primary text-center"> {{ radar.json[2].type | uppercase }} </div>
+      <div class="widget widget-stats bg-primary" style="border-radius: 4px;">
+        <div class="stats-icon">
+          <i class="fa fa-users"></i>
+        </div>
+        <div class="stats-info">
+          <p>
+            {{ radar.json[2].variables.population | number:0 }}
+          </p>
+          <h4>Population</h4>
+        </div>
+        <div class="stats-link">
+          <a href="" ng-click="">[ Map ]
+            <i class="fa fa-share"></i>
+          </a>
+        </div>
+      </div>
+      <div class="text-center"> {{ radar.json[2].address }}</div>
+      <div class="bg-primary bar"></div>
+    </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="text-primary center"> {{ radar.json[2].type | uppercase }} </div>
-                    <div class="widget widget-stats bg-primary" style="border-radius: 4px;">
-                        <div class="stats-icon">
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <div class="stats-info">                            
-                            <p>
-                                {{ radar.json[2].variables.population | number:0 }}
-                            </p>
-                            <h4>Population</h4>
-                        </div>
-
-                        <a class="more" href="" ng-click="">                            
-                            <i class="fa fa-share"></i>
-                        </a>
-                    </div>
-                    <div class="center"> {{ radar.json[2].address }}</div><div class="bg-primary bar"></div>
-                </div>
-
-
-            </div>
-
+  </div>
 </div>
