@@ -10,11 +10,22 @@
 
   function MainCtrl($http) {
     var vm = this;
+    const urlData = "http://localhost:3000/dataTest/"; //Json data API RESTFul
+    
     init();
 
-    function init() {
-      var count = 1;
+    function init() {      
       
+      $http.get(urlData).success(function (data) {
+        var count = 1;
+        data.forEach(function (d) {
+          d.type = d.variables.is_reference === true ? 'Reference area' : 'Compared area ' + count++;
+        });
+        
+        vm.json = data;
+        
+      });
+
       // initialize controller variables to radar chart
       vm.config = {
         w: 250,
@@ -33,15 +44,6 @@
         showPolygons: true
       };
 
-      $http.get("data/data.json").success(function (data) {
-
-        data.forEach(function (d) {
-          d.type = d.variables.is_reference === true ? 'Reference area' : 'Compared area ' + count++;
-        });
-
-        vm.json = data;
-      });
-
     }
 
     vm.download = function () {
@@ -58,7 +60,7 @@
 
 
       var canvas = document.createElement('canvas'),
-        context = canvas.getContext("2d");
+          context = canvas.getContext("2d");
       canvas.id = "radar";
       canvas.width = 400;
       canvas.height = 400;
