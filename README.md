@@ -35,9 +35,11 @@ Now browse to the app at http://localhost:3000/index.html
 
 ## Features & Components
 
-It Contains a fake server to RESTful:
+The page is responsive and fully functional in the latest versions of Chrome, Firefox and Edge.
 
-Sample that you can get a data json by fake server:
+It Contains a fake server RESTful:
+
+Sample that you can get data json by fake server:
 
 ```
 http://localhost:3000/dataTest/1
@@ -68,4 +70,4 @@ a) A Dashboard to print the population of each feature json.
 
 b) A radar chart to show the graph comparision and can download the graph in .png format. 
 
-And a Extra component: a visualization the Map location of each feature json.
+And an Extra component: a visualization the Map location of each feature json.
