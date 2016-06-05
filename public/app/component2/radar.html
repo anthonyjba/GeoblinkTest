@@ -1,18 +1,18 @@
 <h2>Component 2 :</h2>
 
-<!-- visualization -->
+<!-- radar chart -->
 <div class="row">
   <div class="col-lg-5 col-sm-6">
     
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> General Graph Comparision 
-          <a class="download" href="" ng-click="radar.download()"><i class="fa fa-arrow-circle-o-down"></i></a>
+          <a class="icon-right" href="" ng-click="radar.download()"><i class="fa fa-arrow-circle-o-down"></i></a>
         </h3>
       </div>
       <div class="panel-body bg-gray">
         <div>
-          <div style="position: relative; overflow: hidden; text-align:center;">
+          <div class="container-center">
             <radar json="radar.json" config="radar.config"></radar>
           </div>
         </div>
@@ -21,3 +21,5 @@
     
   </div>
 </div>
+
+<div id="pngdataurl"></div>

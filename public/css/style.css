@@ -6,10 +6,6 @@ h1 {
   font-weight: 800;
   font-size: 1.7em;
 }
-.download,
-#title { 
-  float: right; 
-}
 header h3 {
   color: steelblue;
   font-size: 1.5em;
@@ -20,12 +16,6 @@ header h3 {
 footer a,
 footer a:hover, footer a:visited {
   color: #D2A000;
-}
-.text-small {
-  font-size: 12px;
-  font-style: italic;
-  color : #282828;
-  margin: 0px 10px; 
 }
 footer {
   color: white;
@@ -39,6 +29,11 @@ footer {
   width: 100%;
   background: black;
   text-align: center;
+  margin-top: 40px;
+}
+#title ,
+.icon-right { 
+  float: right; 
 }
 .icon-size {
   font-size: 40px;
@@ -49,6 +44,7 @@ footer {
 }
 .widget.widget-stats {
     position: relative;
+    border-radius: 4px;
 }
 .widget-stats .stats-icon {
     font-size: 42px;
@@ -88,6 +84,12 @@ footer {
 .bg-gray {
   background-color: #d9e0e7;
 }
+.text-small {
+  font-size: 12px;
+  font-style: italic;
+  color : #282828;
+  margin: 0px 10px; 
+}
 .text-danger{
   color : #a30000;
 }
@@ -105,11 +107,30 @@ footer {
   fill: gray;
   font-size: 10px;
 }
+.container-center{
+  position: relative; 
+  overflow: hidden; 
+  text-align:center;
+}
 #pngdataurl { 
   display: none; 
+}
+#panel-map {
+  z-index: 10; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0; 
+  margin: auto; 
+  width: 400px;
+  height: 400px;
 }
 #map_canvas {
   margin: 0;
   width: 400px;
   height: 400px;
+}
+#component2 {
+  margin-bottom: 40px;
 }

@@ -5,7 +5,7 @@
   <div class="row row-margin">
     <div class="col-md-4 col-sm-6">
       <div class="text-danger text-center"> {{ radar.json[0].type | uppercase }} </div>
-      <div class="widget widget-stats bg-danger" style="border-radius: 4px;">
+      <div class="widget widget-stats bg-danger">
         <div class="stats-icon">
           <i class="fa fa-users"></i>
         </div>
@@ -28,7 +28,7 @@
     <!-- Dashboard Element 2 -->
     <div class="col-md-4 col-sm-6">
       <div class="text-warning text-center"> {{ radar.json[1].type | uppercase }} </div>
-      <div class="widget widget-stats bg-warning" style="border-radius: 4px;">
+      <div class="widget widget-stats bg-warning">
         <div class="stats-icon">
           <i class="fa fa-users"></i>
         </div>
@@ -52,7 +52,7 @@
     <!-- Dashboard Element 3 -->
     <div class="col-md-4 col-sm-6">
       <div class="text-primary text-center"> {{ radar.json[2].type | uppercase }} </div>
-      <div class="widget widget-stats bg-primary" style="border-radius: 4px;">
+      <div class="widget widget-stats bg-primary">
         <div class="stats-icon">
           <i class="fa fa-users"></i>
         </div>
@@ -74,24 +74,22 @@
 
   </div>
   
-  
-  <div ng-show="radar.showGMaps" style="z-index: 10; position: fixed; top: 0; left: 0; bottom: 0; right: 0;  margin: auto;  width: 400px;  height: 400px;">
-    
+  <!-- Panel Map Location -->
+  <div id="panel-map" ng-show="radar.showGMaps">    
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title"><i class="fa fa-map-marker"></i> Map Location 
-          <a href="" class="download" ng-click="radar.showGMaps=false"><i class="fa fa-close"></i></a>
+          <a href="" class="icon-right" ng-click="radar.showGMaps=false"><i class="fa fa-close"></i></a>
         </h3>
       </div>
       <div class="panel-body bg-gray">
         <div>
-          <div style="position: relative; overflow: hidden; text-align:center;">
+          <div class="container-center">
             <div id="map_canvas" valign='top'></div>
           </div>
         </div>
       </div>
-    </div>
-    
-</div>
+    </div>    
+  </div>
   
 </div>
