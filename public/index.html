@@ -25,14 +25,14 @@
     </div>
   </header>
 
-  <div class="container" ng-controller="MainCtrl as radar">
+  <div class="container" ng-controller="MainCtrl as radar" ng-init="radar.init()">
 
     <section id="component1">
-      <div ng-include="'app/componente1/dashboard.html'"></div>
+      <div ng-include="'app/component1/dashboard.html'"></div>
     </section>
 
     <section id="component2">
-      <div ng-include="'app/componente2/radar.html'"></div>
+      <div ng-include="'app/component2/radar.html'"></div>
     </section>
     
   </div>
@@ -53,6 +53,7 @@
 
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/i18n/angular-locale_es-es.js"></script>
   <!-- D3 -->
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <!-- JQuery -->
@@ -61,9 +62,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <!-- code -->
-  <script src="app/componente2/scripts/RadarChart.js"></script>
-  <script src="app/componente2/scripts/radarParse.js"></script>
   <script src="app/app.js"></script>
-
+  <script src="app/component1/scripts/dataService.js"></script>
+  <script src="app/component2/scripts/RadarChart.js"></script>
+  <script src="app/component2/scripts/radarParse.js"></script>
+  
 </body>
 </html>

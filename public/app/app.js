@@ -1,29 +1,30 @@
 (function () {
-  'use strict';
+   'use strict';
 
   /**
  * Main Controller
  */
   angular.module("app", [])
     .directive("radar", radar)
-    .controller("MainCtrl", MainCtrl);
+    .controller("MainCtrl", ['$http','dataService', MainCtrl]);
 
-  function MainCtrl($http) {
+  function MainCtrl($http,dataService) {
     var vm = this;
     const urlData = "http://localhost:3000/dataTest/"; //Json data API RESTFul
     
-    init();
+    vm.init = function() {
 
-    function init() {      
-      
-      $http.get(urlData).success(function (data) {
-        var count = 1;
-        data.forEach(function (d) {
-          d.type = d.variables.is_reference === true ? 'Reference area' : 'Compared area ' + count++;
-        });
+      // promise to get Json
+      var promise = dataService.getData(urlData);
+      promise.then(function(data) {
+          var count = 1;
+          data.forEach(function (d) {
+            d.type = d.variables.is_reference === true ? 'Reference area' : 'Compared area ' + count++;
+          });
+          vm.json = data;  
         
-        vm.json = data;
-        
+      }, function(err) {
+        console.log('Data Object is '+ vm.json);
       });
 
       // initialize controller variables to radar chart
@@ -47,43 +48,9 @@
     }
 
     vm.download = function () {
-
-      var html = d3.select('svg')
-        .attr("version", 1.1)
-        .attr("xmlns", "http://www.w3.org/2000/svg")
-        .node().parentNode.innerHTML;
-
-      //console.log(html);
-      var imgsrc = 'data:image/svg+xml;base64,' + btoa(html);
-      var img = '<img src="' + imgsrc + '">';
-      d3.select("#svgdataurl").html(img);
-
-
-      var canvas = document.createElement('canvas'),
-          context = canvas.getContext("2d");
-      canvas.id = "radar";
-      canvas.width = 400;
-      canvas.height = 400;
-
-      var image = new Image;
-      image.src = imgsrc;
-      image.onload = function () {
-        context.drawImage(image, 0, 0);
-
-        var canvasdata = canvas.toDataURL("image/png");
-
-        var pngimg = '<img src="' + canvasdata + '">';
-        d3.select("#pngdataurl").html(pngimg);
-
-        var a = document.createElement("a");
-        a.download = "radar.png";
-        a.href = canvasdata;
-        document.body.appendChild(a);
-        a.click();
-      };
-
-
-    }
+      createImage();
+     }     
+     
   }
   
   /**
@@ -100,4 +67,4 @@
     };
   }
 
-})();
+ })();
