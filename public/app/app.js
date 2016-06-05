@@ -8,11 +8,11 @@
     .directive("radar", radar)
     .controller("MainCtrl", ['$http','dataService', MainCtrl]);
 
-  function MainCtrl($http,dataService) {
+  function MainCtrl($http, dataService) {
     var vm = this;
     const urlData = "http://localhost:3000/dataTest/"; //Json data API RESTFul
-    
-    vm.init = function() {
+     
+    vm.init = function() {      
 
       // promise to get Json
       var promise = dataService.getData(urlData);
@@ -44,7 +44,14 @@
         showVertices: true,
         showPolygons: true
       };
+      
+      vm.showGMaps = false;
 
+    }
+
+    vm.panelGMaps = function (address) {
+      //mapLocation.showMap(address);
+      vm.showGMaps=true;
     }
 
     vm.download = function () {

@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    /**
-	 * Servicio de Cubo
+   /**
+	 * Data Service
 	 */
     angular
 	  .module('app')

@@ -2,7 +2,7 @@
 <html data-ng-app="app">
 
 <head>
-  <title>Geoblink Exercise</title>
+  <title>Geoblink Exercise FrontEnd</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8" />
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/local.css">
+  <link rel="stylesheet" href="css/themeDark.css">
 
 </head>
 
@@ -37,20 +37,22 @@
     
   </div>
 
-  <p style="height:40px">
+  
+
+  <p style="height:40px">    
     <div id="pngdataurl"></div>
-  </p>
+  
   
   <!-- footer -->
   <footer>
     <p>Geoblink exercise by Anthony Bonifacio, 2016-06-01 - Madrid (Spain)
       <br />
-      <a href="http://github.com/anthonyjba" target="_blank"><i class="fa fa-github"></i></a> |
-      <a href="http://twiter.com/anthonyjba" target="_blank"><i class="fa fa-twitter"></i></a> |
-      <a href="http://www.linkedin.com/in/anthonyjba" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/anthonyjba/GeoblinkTest" target="_blank"><i class="fa fa-github"></i></a> |
+      <a href="https://twitter.com/anthonyjba" target="_blank"><i class="fa fa-twitter"></i></a> |
+      <a href="https://www.linkedin.com/in/anthonyjba" target="_blank"><i class="fa fa-linkedin"></i></a>
     </p>
   </footer>
-
+  
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/i18n/angular-locale_es-es.js"></script>
@@ -60,10 +62,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <!-- Bootstrap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
   <!-- code -->
   <script src="app/app.js"></script>
   <script src="app/component1/scripts/dataService.js"></script>
+  <script src="app/component1/scripts/mapLocation.js"></script>  
   <script src="app/component2/scripts/RadarChart.js"></script>
   <script src="app/component2/scripts/radarParse.js"></script>
   
