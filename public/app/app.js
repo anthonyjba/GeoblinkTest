@@ -50,7 +50,8 @@
     }
 
     vm.panelGMaps = function (address) {
-      //mapLocation.showMap(address);
+      //mapLocation.
+      showMap(address);
       vm.showGMaps=true;
     }
 
