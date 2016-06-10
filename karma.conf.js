@@ -8,15 +8,17 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'component1/**/*.js',
+      '**/*.module.js',
+      '*!(.module|.spec).js',
       //'component*/*.js',
-      '*.js'
+      '**/*.spec.js'
     ],
 
     autoWatch: true,
 
     frameworks: ['jasmine'],
 
-    browsers: ['Chrome','firefox'],
+    browsers: ['Chrome'], //, 'Firefox'
 
     plugins: [
       'karma-chrome-launcher',

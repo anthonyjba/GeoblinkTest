@@ -1,14 +1,14 @@
 (function () {
    'use strict';
 
-  /**
+ /**
  * Main Controller
  */
   angular.module("app", [])
     .directive("radar", radar)
-    .controller("MainCtrl", ['$http','dataService', MainCtrl]);
+    .controller("MainCtrl", ['dataService', MainCtrl]);
 
-  function MainCtrl($http, dataService) {
+  function MainCtrl(dataService) {
     var vm = this;
     const urlData = "http://localhost:3000/dataTest/"; //Json data API RESTFul
      
@@ -24,7 +24,7 @@
           vm.json = data;  
         
       }, function(err) {
-        console.log('Data Object is '+ vm.json);
+          console.log('Data Object is '+ vm.json);
       });
 
       // initialize controller variables to radar chart

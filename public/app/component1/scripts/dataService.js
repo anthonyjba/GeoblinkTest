@@ -6,7 +6,7 @@
 	 */
     angular
 	  .module('app')
-	  .factory('dataService', dataService);
+	  .factory('dataService',  ['$http', '$q',dataService]);
     
     function dataService ($http, $q) {  
         return {
