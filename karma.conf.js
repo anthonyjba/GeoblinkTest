@@ -10,15 +10,14 @@ module.exports = function(config) {
       'component1/scripts/dataService.js',
       '*.controller.js',
       '*!(.module|.spec).js',
-      //'component*/*.js',
-      '**/*.spec.js'
+      'test/*.spec.js'
     ],
 
     autoWatch: true,
 
     frameworks: ['jasmine'],
 
-    browsers: ['Chrome'], //, 'Firefox'
+    browsers: ['Chrome', 'Firefox'],
 
     plugins: [
       'karma-chrome-launcher',

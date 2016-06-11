@@ -1,3 +1,5 @@
+'use strict';
+
 describe('demoApp controllers', function() {
   
     beforeEach(module('demoApp.controllers'));          
@@ -11,7 +13,7 @@ describe('demoApp controllers', function() {
         , service
         , $httpBackend;
       beforeEach(inject(function(_$httpBackend_, $rootScope, $controller, dataService) {
-          console.log('*** IN INJECT!! ***');
+          //console.log('*** IN INJECT!! ***');
           $httpBackend = _$httpBackend_;
           scope = $rootScope.$new();
           service = dataService;
@@ -23,6 +25,10 @@ describe('demoApp controllers', function() {
 
       it('should set the correct showGMaps value', function() {
           expect(vm.showGMaps).toBe(false);
+      });
+      
+      it('should set the correct urlData service', function() {
+          expect(vm.urlData).toBe('http://localhost:3000/dataTest/');
       });
     });
   

@@ -10,24 +10,13 @@
 
   function MainCtrl(dataService) {
     var vm = this;
-    vm.showGMaps = false;
-    const urlData = "http://localhost:3000/dataTest/"; //Json data API RESTFul
     
-     
+    //Set Main controller Values
+    vm.showGMaps = false;
+    vm.urlData = "http://localhost:3000/dataTest/"; //Json data API RESTFul
+    /*******************/
+         
     vm.init = function() {      
-
-      // promise to get Json
-      var promise = dataService.getData(urlData);
-      promise.then(function(data) {
-          var count = 1;
-          data.forEach(function (d) {
-            d.type = d.variables.is_reference === true ? 'Reference area' : 'Compared area ' + count++;
-          });
-          vm.json = data;  
-        
-      }, function(err) {
-          console.log('Data Object is '+ vm.json);
-      });
 
       // initialize controller variables to radar chart
       vm.config = {
@@ -45,7 +34,28 @@
         showLegend: true,
         showVertices: true,
         showPolygons: true
-      };            
+      };
+      
+      vm.loadDataService();            
+
+    }
+    
+    vm.loadDataService = function () {
+
+        // promise to get Json
+        var promise = dataService.getData(vm.urlData);
+        promise.then(function(data) {
+            var count = 1;
+            data.forEach(function (d) {
+              d.type = d.variables.is_reference === true ? 'Reference area' : 'Compared area ' + count++;
+            });
+            vm.json = data;  
+          
+        })
+        .catch(function() {
+            // This is set in the event of an error.
+            vm.error = 'There has been an error!';
+        });
 
     }
 

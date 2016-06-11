@@ -19,7 +19,7 @@
 
     
     function showMap(address) {
-          console.log(address);
+
       if (geocoder) {
         
           getCoordinates(address, function (coords){
