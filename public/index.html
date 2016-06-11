@@ -25,7 +25,7 @@
     </div>
   </header>
 
-  <div class="container" ng-controller="demoApp.controllers as radar" ng-init="radar.init()">
+  <div class="container" ng-controller="MainCtrl as radar" ng-init="radar.init()">
 
     <section id="component1">
       <div ng-include="'app/component1/dashboard.html'"></div>
@@ -63,6 +63,7 @@
 
   <!-- code -->
   <script src="app/app.module.js"></script>
+  <script src="app/app.controller.js"></script>
   <script src="app/component1/scripts/dataService.js"></script>  
   <script src="app/component1/scripts/mapLocation.js"></script>
   <script src="app/component2/scripts/RadarChart.js"></script>
