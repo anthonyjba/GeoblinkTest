@@ -1,28 +1,28 @@
 # GeoblinkTest
 Geoblink Exercise - Front End
 
-* Prerequisites
+## Prerequisites
 
   You need git to clone the GeoblinkTest repository. You can get git from http://git-scm.com/.
   
   Also to initialize and test GeoblinkTest. You must have node.js and its package manager (npm) installed. You can get them from http://nodejs.org/.
 
-Steps to run this repository:
+# Steps to run this repository:
 
-* Clone GeoblinkTest :
+## Clone GeoblinkTest :
 
 ```
 git clone https://github.com/anthonyjba/GeoblinkTest.git
 cd GeoblinkTest
 ```
 
-* Install Dependencies :
+## Install Dependencies :
 
 ```
 npm install
 ```
 
-* Run the Application :
+## Run the Application :
 
 We have preconfigured the project with a simple development web server. The simplest way to start this server is:
 
@@ -32,7 +32,7 @@ npm start
 
 - Navigate your browser to [http://localhost:3000/index.html](http://localhost:3000/index.html) to see the application.
 
-### Unit Testing
+## Unit Testing
 
 using [Jasmine][jasmine] and [Karma][karma] for your unit tests/specs.
 
@@ -82,4 +82,4 @@ a) A Dashboard to print the population of each feature json.
 
 b) A radar chart to show the graph comparision and can download the graph in .png format. 
 
-And an Extra component: a visualization the Map location of each feature json.
+And an extra component: Visualization the Map location of each feature json.
