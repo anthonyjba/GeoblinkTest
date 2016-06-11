@@ -1,8 +1,10 @@
 # GeoblinkTest
 Geoblink Exercise - Front End
+
 AngularJS application with Dashboard Bootstrap and D3 radar chart.
-In the Bootstrap component using a theme dark style. Also a map location using a geocoder of google Maps Api.
-The d3 radar chart component is a svg that it allows to download to a image in .png format.
+
+- In the Bootstrap component using a theme dark style. Also a map location using a geocoder of google Maps Api.
+- The d3 radar chart component is a svg that it allows to download to a image in .png format.
 
 ## Prerequisites
 
