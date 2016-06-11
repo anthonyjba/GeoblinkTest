@@ -13,7 +13,7 @@ describe('Testing a Controller that uses a Promise', function () {
           variables: { population: 5759, is_reference: false}
         },
         { id: 3, address : 'address Z',
-        variables: { population: 1523, is_reference: false}
+          variables: { population: 1523, is_reference: false}
         }
       ];
     
