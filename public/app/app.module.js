@@ -4,9 +4,9 @@
  /**
  * Main Controller
  */
-  angular.module("app", [])
-    .directive("radar", radar)
-    .controller("MainCtrl", ['dataService', MainCtrl]);
+  angular.module('demoApp', ['demoApp.services'])
+    .directive('radar', radar)
+    .controller('demoApp.controllers', ['dataService', MainCtrl]);
 
   function MainCtrl(dataService) {
     var vm = this;
