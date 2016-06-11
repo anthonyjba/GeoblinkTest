@@ -1,5 +1,8 @@
 # GeoblinkTest
 Geoblink Exercise - Front End
+AngularJS application with Dashboard Bootstrap and D3 radar chart.
+In the Bootstrap component using a theme dark style. Also a map location using a geocoder of google Maps Api.
+The d3 radar chart component is a svg that it allows to download to a image in .png format.
 
 ## Prerequisites
 
@@ -34,7 +37,7 @@ npm start
 
 ### Unit Testing
 
-using [Jasmine][jasmine] and [Karma][karma] for your unit tests/specs.
+using [Jasmine](https://jasmine.github.io/]) and [Karma](https://karma-runner.github.io/) for your unit tests/specs.
 
 ```
 npm test
