@@ -30,8 +30,20 @@ We have preconfigured the project with a simple development web server. The simp
 npm start
 ```
 
-Now browse to the app at http://localhost:3000/index.html
+- Navigate your browser to [http://localhost:3000/index.html](http://localhost:3000/index.html) to see the application.
 
+### Unit Testing
+
+using [Jasmine][jasmine] and [Karma][karma] for your unit tests/specs.
+
+```
+npm test
+```
+
+- A browser will start and connect to the Karma server. Chrome and Firefox are the default browsers,
+  others can be captured by loading the same URL or by changing the `karma.conf.js` file.
+- Karma will sit and watch your application and test JavaScript files. To run or re-run tests just
+  change any of your these files.
 
 ## Features & Components
 
